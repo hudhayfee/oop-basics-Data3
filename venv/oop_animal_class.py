@@ -7,10 +7,12 @@
 
 class Animal():
 
-    def __init__(self): # constructor method runs whenever an instance is created
-        self.name = 'Ringo' # property of the animal
+    def __init__(self, name, age): # constructor method runs whenever an instance is created
+        self.name = name # property of the animal
         self.species = 'Lizard'
-        self.age = 7
+        self.age = age
+        self.alive = True
+        self.number_of_animal_eaten = 0
 
     #method for class object - instances
     def sleep(self): # self refers to the instances if gets called upon
@@ -18,21 +20,22 @@ class Animal():
         return 'zzzz'
 
     def eat(self, food):
+        self.number_of_animal_eaten += 1
         return 'nom NOM nom NOM this was some good ' + food
 
     def potty(self):
         return "... .... "
 
-
-animal_1 = Animal()# creating 1 instance of class Animal
-# print(animal_1)
-# print(type(animal_1))
-
-# calling methond on instance of Animal
-print(animal_1.sleep())
-print(animal_1.eat('meat salad'))
-print(animal_1.potty())
-
-# Accessing properties of instances of animal
-print(animal_1.name)
-print(animal_1.age)
+# 
+# animal_1 = Animal()# creating 1 instance of class Animal
+# # print(animal_1)
+# # print(type(animal_1))
+# 
+# # calling methond on instance of Animal
+# print(animal_1.sleep())
+# print(animal_1.eat('meat salad'))
+# print(animal_1.potty())
+# 
+# # Accessing properties of instances of animal
+# print(animal_1.name)
+# print(animal_1.age)
